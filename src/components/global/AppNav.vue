@@ -5,7 +5,7 @@
       <div style="margin-inline: 2rem">
         <div class="site-header__inner">
           <img
-            src="../assets/imges/elfateh.jpg"
+            src="../../assets/imges/elfateh.jpg"
             alt="El Fateh"
             style="max-inline-size: 60px"
           />
@@ -18,7 +18,7 @@
           >
             <span class="visually-hidden">Menue</span>
             <img
-              src="../assets/imges/hamburger.svg"
+              src="../../assets/imges/hamburger.svg"
               alt="menue"
               style="width: 40px; height: 40px"
             />
