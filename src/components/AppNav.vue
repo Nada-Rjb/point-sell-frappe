@@ -111,9 +111,9 @@
     padding: 0;
     display: flex;
     position: static;
-
     flex-wrap: wrap;
     gap: 0.5rem 2rem;
+    cursor: pointer;
   }
   a {
     text-decoration: none;
@@ -143,10 +143,11 @@
       z-index: 1000;
       border-radius: var(--border-radius-3);
       padding: 2rem 0;
+
       li {
         background-color: white;
         padding: 1rem;
-        border: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
         align-items: center;
         font-weight: bolder;
         width: 100%;
