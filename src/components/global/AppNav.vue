@@ -199,20 +199,6 @@
     display: block;
     opacity: 1;
     translate: 0 0;
-
-    @starting-style {
-      opacity: 0;
-      translate: 0 -100%;
-    }
-    li {
-      translate: 0 0;
-      opacity: 1;
-      @starting-style {
-        /*translate: 0 -50%;*/
-        opacity: 0;
-        translate: -50% 0;
-      }
-    }
   }
 }
 </style>
