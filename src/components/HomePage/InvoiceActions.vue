@@ -16,18 +16,34 @@
   justify-content: center;
   gap: 2rem;
 }
+
+@media (min-width: 760px) {
+  .invoice-actions {
+    flex-direction: row;
+    gap: 15rem;
+  }
+}
+
 button {
   width: 153px;
   height: 40px;
-  border-radius: var(--border-radius-1);
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+  font: bolder;
 }
 .show-invoices {
-  background-color: black;
-  color: white;
+  background-color: #2c2c2c;
+  color: #f5f5f5;
   border: 1px solid #2c2c2c;
-  border-radius: var(--border-radius-2);
 }
 .upload-invoice {
   border: 1px solid #d9d9d9;
+  color: #1e1e1e;
+}
+.upload-invoice:hover {
+  background-color: #e3e3e3;
+}
+.show-invoices:hover {
+  background-color: #373737;
 }
 </style>
