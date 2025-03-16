@@ -2,7 +2,6 @@
   <div class="home"></div>
   <app-search></app-search>
   <customer-info></customer-info>
-  <h1>cfefdvca</h1>
 </template>
 
 <script>

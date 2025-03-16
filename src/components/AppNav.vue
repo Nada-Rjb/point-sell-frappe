@@ -74,6 +74,7 @@
   overflow-x: clip;
   position: relative;
   border-bottom: #d9d9d9 solid;
+  z-index: 101;
 
   a {
     color: var(--clt-black);
@@ -104,7 +105,6 @@
 }
 
 .primary-nav {
-  border: #000000;
   ul {
     list-style: none;
     margin-top: 1.2rem;
@@ -120,6 +120,14 @@
   }
 
   @media (width < 760px) {
+    .site-header {
+      padding-block: 0.5rem;
+      /*overflow-x: hidden;*/
+      overflow-x: clip;
+      position: relative;
+      border-bottom: #d9d9d9 solid;
+      z-index: 101;
+    }
     height: calc(100vh - 5rem); /* Full height */
     position: hidden;
     display: flex;
@@ -140,7 +148,7 @@
       flex-direction: column;
       max-width: 400px;
       width: 80%;
-      z-index: 1000;
+      z-index: 100;
       border-radius: var(--border-radius-3);
       padding: 2rem 0;
 
