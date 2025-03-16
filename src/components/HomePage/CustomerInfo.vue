@@ -38,7 +38,7 @@ export default {
 }
 
 .customer-img {
-  width: 100%;
+  width: 90%;
   aspect-ratio: 16 / 9;
   object-fit: cover; /* Better scaling */
   background-color: #eee;
@@ -48,7 +48,7 @@ export default {
 .infomatin {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   padding: 0.5rem;
   gap: 0.1rem;
 }
