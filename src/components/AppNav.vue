@@ -47,6 +47,11 @@
 </template>
 <script></script>
 <style lang="scss">
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .skipp-to-header:not(:focus) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -69,6 +74,14 @@
   overflow-x: clip;
   position: relative;
   border-bottom: #d9d9d9 solid;
+
+  a {
+    color: var(--clt-black);
+  }
+  a:hover,
+  a:focus-visible {
+    color: #f59c5c;
+  }
 }
 .site-header__inner {
   display: flex;
@@ -91,12 +104,14 @@
 }
 
 .primary-nav {
+  border: #000000;
   ul {
     list-style: none;
     margin-top: 1.2rem;
     padding: 0;
     display: flex;
     position: static;
+
     flex-wrap: wrap;
     gap: 0.5rem 2rem;
   }
@@ -105,7 +120,7 @@
   }
 
   @media (width < 760px) {
-    height: calc(115vh - 5rem); /* Full height */
+    height: calc(100vh - 5rem); /* Full height */
     position: hidden;
     display: flex;
     flex-direction: column;
@@ -117,6 +132,7 @@
     align-items: center;
     width: 100%;
     font-size: large;
+    background-color: white;
     ul {
       display: flex;
       align-items: center;
@@ -127,7 +143,6 @@
       z-index: 1000;
       border-radius: var(--border-radius-3);
       padding: 2rem 0;
-      cursor: pointer;
       li {
         background-color: white;
         padding: 1rem;
@@ -141,11 +156,15 @@
       }
     }
   }
+
   .logout {
+    /* Push to bottom */
     color: red;
     font-weight: bold;
     text-align: center;
+    padding: 0.5rem;
     cursor: pointer;
+    border-bottom: red solid;
   }
 }
 .menu-active {
@@ -171,6 +190,20 @@
     display: block;
     opacity: 1;
     translate: 0 0;
+
+    @starting-style {
+      opacity: 0;
+      translate: 0 -100%;
+    }
+    li {
+      translate: 0 0;
+      opacity: 1;
+      @starting-style {
+        /*translate: 0 -50%;*/
+        opacity: 0;
+        translate: -50% 0;
+      }
+    }
   }
 }
 </style>
@@ -198,6 +231,8 @@ export default {
     toggleMenu() {
       if (this.isMobile) {
         this.menuOpen = !this.menuOpen; // Toggle only on small screens
+        // Toggle "no-scroll" class on the body to prevent scrolling when the menu is open
+
         document.body.classList.toggle("no-scroll", this.menuOpen);
         console.log("Menu Open:", this.menuOpen); // Debugging: Check console log
       }
