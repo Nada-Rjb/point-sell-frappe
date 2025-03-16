@@ -272,7 +272,7 @@
     }
   }
   .section {
-    --pading: 3.75rem;
+    --pading: 1rem;
     padding-block: var(--pading);
     @media (min-width: 760px) {
       --pading: 8rem;

@@ -35,7 +35,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
 }
 
 .customer-img {
@@ -50,8 +49,8 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1rem;
-  gap: 1rem;
+  padding: 0.5rem;
+  gap: 0.1rem;
 }
 .hero {
   align-items: center;
