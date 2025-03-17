@@ -2,7 +2,7 @@
   <section class="hero flow section" data-padding="compact">
     <div class="wrapper" id="main">
       <div class="TransactionButtons">
-        <StatusButton label="فاتورة" status="error"></StatusButton>
+        <StatusButton label="فاتوره" status="error"></StatusButton>
         <StatusButton label="دفع" status="success"></StatusButton>
         <StatusButton label="بواسطه " status=""></StatusButton>
       </div>
@@ -19,7 +19,7 @@ export default {
 <style>
 .TransactionButtons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 </style>
